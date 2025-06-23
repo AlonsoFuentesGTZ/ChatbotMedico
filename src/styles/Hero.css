@@ -1,0 +1,188 @@
+/* Estilo general para la página */
+.hero {
+  position: relative;
+  text-align: center;
+  background-image: url('../assets/fondooficial.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 85vh;
+  padding-bottom: 40px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-btn {
+  padding: 17px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #94733e; /* Color dorado */
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: #7a5e32 0px 10px 0px 0px; /* Color dorado más oscuro para la sombra */
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.contact-btn:hover {
+  box-shadow: #7a5e32 0px 7px 0px 0px;
+}
+
+.contact-btn:active {
+  background-color: #94733e;
+  box-shadow: #7a5e32 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+/* Estilo para el botón flotante */
+.chatbot-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #89a5c9;
+  color: white;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-float-btn:hover {
+  background-color: #89a5c9;
+  transform: scale(1.05);
+}
+
+/* Estilo para el contenedor del chatbot */
+.chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40%;
+}
+
+.chatbot-container.visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.chatbot-container.minimized {
+  height: 60px;
+  width: 250px;
+}
+
+/* Header del chatbot */
+.chatbot-header {
+  background: #ffd7b3;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.chatbot-controls {
+  display: flex;
+  gap: 10px;
+}
+
+/* Contenido del chatbot */
+.chatbot-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-container iframe {
+  flex: 1;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Botones de control */
+.minimize-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.minimize-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chatbot-container {
+    width: 90%;
+    right: 5%;
+    bottom: 80px;
+    height: 60vh;
+  }
+  
+  .chatbot-container.minimized {
+    width: 70%;
+    height: 60px;
+  }
+  
+  .chatbot-float-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+}

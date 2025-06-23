@@ -1,0 +1,108 @@
+.servicios {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.servicio-title {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  padding: 10px 20px;
+  border: 2px solid #c2c6ca;
+  border-radius: 8px;
+  display: inline-block;
+  background-color: bisque;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgb(179, 173, 171);
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, rgb(252, 237, 218) 60%, rgb(250, 241, 238) 88%, rgb(254, 231, 222) 40%, rgba(209, 186, 186, 0.603) 48%);
+  color: rgb(51, 51, 51);
+  padding: 1rem; /* Add padding to prevent text from touching the borders */
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, rgb(241, 222, 215) 30%, rgb(207, 195, 190) 88%, rgb(244, 228, 209) 40%, rgb(152, 143, 140) 78%);
+  color:rgb(51, 51, 51);
+  transform: rotateY(180deg);
+  padding: 1rem; /* Add padding to prevent text from touching the borders */
+}
+
+.flip-card i {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+.flip-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.flip-card-front p, .flip-card-back p {
+  font-size: 1rem;
+  color: rgb(51, 51, 51);
+  text-align: justify; /* Justify the text */
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Ensures text wraps properly */
+}
+
+@media (max-width: 900px) {
+  .flip-card {
+    width: 45%; /* Dos cards por fila */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .flip-card {
+    width: 90%; /* Una card por fila */
+  }
+}

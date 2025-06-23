@@ -1,0 +1,31 @@
+/* Home.css */
+
+/* Asegurar que el contenido no se desborde */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que la altura cubra toda la pantalla */
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+  }
+  
+  .home-container {
+    min-height: 100vh;  /* Asegura que la altura mínima sea de la altura completa de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Asegura que los elementos se alineen desde arriba */
+    overflow: hidden; /* Evitar desplazamiento vertical innecesario */
+}
+  
+  .hero-section, .services-section {
+    width: 100%;
+  }
+  
+  /* Ajuste adicional para el espaciado entre las secciones */
+  .hero-section {
+    padding: 50px 0; /* Espaciado superior e inferior para la sección Hero */
+  }
+  
+  .services-section {
+    padding: 30px 0; /* Espaciado superior e inferior para la sección Servicios */
+  }
+  

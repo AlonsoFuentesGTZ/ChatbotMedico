@@ -1,0 +1,82 @@
+.case-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+@media (max-width: 768px) {
+  .case-list-container {
+    padding-top: 130px;
+  }
+}
+
+.case-card {
+  background-color: #f9fdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,123,255,0.15);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,123,255,0.25);
+}
+
+.case-card img.main-image {
+  width: 100%;  /* Cambié el ancho al 100% para que ocupe todo el espacio disponible */
+  height: 200px; /* Ajusta la altura de la imagen para que se ajuste mejor */
+  object-fit: cover; /* Hace que la imagen cubra completamente el área */
+  border-bottom: 1px solid #cce5ff;
+  display: block; /* Elimina cualquier espacio en blanco debajo de la imagen */
+  margin: 0 auto;  /* Centra la imagen horizontalmente */
+}
+
+
+.case-info {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.case-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #004085;
+}
+
+.case-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.case-info strong {
+  color: #0056b3; /* Azul oscuro para estado */
+}
+
+.ver-mas-button {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+.ver-mas-button:hover {
+  background-color: #0056b3;
+}
