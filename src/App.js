@@ -47,14 +47,6 @@ function App() {
       </button>
 
       <div className={`chatbot-container ${showChatbot ? "visible" : ""} ${isMinimized ? "minimized" : ""}`}>
-        <div className="chatbot-header">
-          <span>Asistente</span>
-          <div className="chatbot-controls">
-            <button className="minimize-btn" onClick={handleMinimize}>
-              {isMinimized ? "⬆️​" : "⬇️"}
-            </button>
-          </div>
-        </div>
 
         {!isMinimized && (
           <div className="chatbot-content">
